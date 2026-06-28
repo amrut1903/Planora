@@ -1,0 +1,6 @@
+{
+  "name": "Planora",
+  "description": "Plan better. Live clearer. Your intelligent personal agent.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

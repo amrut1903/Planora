@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#879B6A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Planora">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <title>My Google AI Studio App</title>
+    <script>
+      // Prevent libraries from crashing the app when trying to polyfill fetch
+      try {
+        const _fetch = window.fetch;
+        if (Object.getOwnPropertyDescriptor(window, 'fetch')?.configurable !== false) {
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return _fetch; },
+            set: function() { console.warn("Ignored fetch reassign"); },
+            configurable: true
+          });
+        }
+        if (Object.getOwnPropertyDescriptor(Window.prototype, 'fetch')?.configurable !== false) {
+          Object.defineProperty(Window.prototype, 'fetch', {
+            get: function() { return _fetch; },
+            set: function() { console.warn("Ignored fetch reassign"); },
+            configurable: true
+          });
+        }
+      } catch (e) {
+        console.error("Failed to patch window.fetch", e);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

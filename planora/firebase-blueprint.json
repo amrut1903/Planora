@@ -1,0 +1,114 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A user's task",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "emoji": { "type": "string" },
+        "notes": { "type": "string" },
+        "deadline": { "type": "string", "format": "date-time" },
+        "priority": { "type": "string", "enum": ["high", "medium", "low"] },
+        "estimatedMinutes": { "type": "number" },
+        "category": { "type": "string", "enum": ["assignment", "meeting", "personal", "study", "other"] },
+        "completed": { "type": "boolean" },
+        "completedAt": { "type": "string", "format": "date-time" },
+        "reminder": { "type": "boolean" },
+        "notifiedPre": { "type": "boolean" },
+        "notifiedDue": { "type": "boolean" },
+        "completionNote": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "priority", "category", "completed", "createdAt"]
+    },
+    "Goal": {
+      "title": "Goal",
+      "description": "A user's goal",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "emoji": { "type": "string" },
+        "description": { "type": "string" },
+        "subGoals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "done": { "type": "boolean" }
+            }
+          }
+        }
+      },
+      "required": ["id", "title"]
+    },
+    "DiaryEntry": {
+      "title": "DiaryEntry",
+      "description": "A diary entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "content": { "type": "string" },
+        "mood": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "date", "content", "mood", "createdAt", "updatedAt"]
+    },
+    "Settings": {
+      "title": "Settings",
+      "description": "User settings",
+      "type": "object",
+      "properties": {}
+    },
+    "Analytics": {
+      "title": "Analytics",
+      "description": "User analytics",
+      "type": "object",
+      "properties": {}
+    },
+    "Leaderboard": {
+      "title": "Leaderboard",
+      "description": "Leaderboard entry",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "country": { "type": "string" },
+        "flag": { "type": "string" },
+        "points": { "type": "number" }
+      },
+      "required": ["displayName", "points"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/tasks/{taskId}": {
+      "schema": { "$ref": "#/entities/Task" },
+      "description": "Tasks for a specific user"
+    },
+    "users/{userId}/goals/{goalId}": {
+      "schema": { "$ref": "#/entities/Goal" },
+      "description": "Goals for a specific user"
+    },
+    "users/{userId}/diary/{entryId}": {
+      "schema": { "$ref": "#/entities/DiaryEntry" },
+      "description": "Diary entries for a specific user"
+    },
+    "users/{userId}/settings/{docId}": {
+      "schema": { "$ref": "#/entities/Settings" },
+      "description": "Settings for a user"
+    },
+    "users/{userId}/analytics/{docId}": {
+      "schema": { "$ref": "#/entities/Analytics" },
+      "description": "Analytics for a user"
+    },
+    "leaderboard/{uid}": {
+      "schema": { "$ref": "#/entities/Leaderboard" },
+      "description": "Public leaderboard"
+    }
+  }
+}
