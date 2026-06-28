@@ -5,12 +5,6 @@
 
 **An AI-powered productivity companion with Suri — your autonomous personal agent**
 
-<img width="560" height="871" alt="Screenshot 2026-06-28 141635" src="https://github.com/user-attachments/assets/9522096a-8de4-46ed-8ea5-4598996d9dac" />
-<img width="560" height="867" alt="Screenshot 2026-06-28 141651" src="https://github.com/user-attachments/assets/242d277f-8eca-4ce7-8fb8-21ab4f44ddb2" />
-<img width="560" height="867" alt="Screenshot 2026-06-28 141701" src="https://github.com/user-attachments/assets/af32cf60-51dd-4c23-9895-108d1b8f85f9" />
-<img width="560" height="872" alt="Screenshot 2026-06-28 141734" src="https://github.com/user-attachments/assets/4470670c-5d88-416f-b714-3c68dd70ed86" />
-
-
 </div>
 
 ---
@@ -27,30 +21,10 @@ Think of Suri as the chief of staff you never had.
 
 ##  Screenshots
 
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center"><b> Dashboard</b></td>
-    <td align="center"><b> Tasks</b></td>
-    <td align="center"><b> Suri — AI Agent</b></td>
-    <td align="center"><b> Leaderboard</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/dashboard.png" width="180" alt="Dashboard"/></td>
-    <td><img src="screenshots/tasks.png" width="180" alt="Tasks"/></td>
-    <td><img src="screenshots/suri.png" width="180" alt="Suri AI Agent"/></td>
-    <td><img src="screenshots/leaderboard.png" width="180" alt="Leaderboard"/></td>
-  </tr>
-  <tr>
-    <td align="center"><i>Smart greeting, stats & priority tasks</i></td>
-    <td align="center"><i>AI brain dump with voice input</i></td>
-    <td align="center"><i>Chat with your personal agent</i></td>
-    <td align="center"><i>Global & country rankings</i></td>
-  </tr>
-</table>
-
-</div>
+<img width="560" height="871" alt="Screenshot 2026-06-28 141635" src="https://github.com/user-attachments/assets/9522096a-8de4-46ed-8ea5-4598996d9dac" />
+<img width="560" height="867" alt="Screenshot 2026-06-28 141651" src="https://github.com/user-attachments/assets/242d277f-8eca-4ce7-8fb8-21ab4f44ddb2" />
+<img width="560" height="867" alt="Screenshot 2026-06-28 141701" src="https://github.com/user-attachments/assets/af32cf60-51dd-4c23-9895-108d1b8f85f9" />
+<img width="560" height="872" alt="Screenshot 2026-06-28 141734" src="https://github.com/user-attachments/assets/4470670c-5d88-416f-b714-3c68dd70ed86" />
 
 ---
 
